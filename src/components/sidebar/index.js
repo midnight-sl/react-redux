@@ -5,7 +5,7 @@ import './sidebar.css';
 export const SideBar = (props) => {
   return (<div className="App-sidebar">
     <nav className="App-sidebar-nav">
-      <NavLink to="/">Product list</NavLink>
+      <NavLink to="/" exact>Product list</NavLink>
       <NavLink to="/cart">Cart</NavLink>
     </nav>
   </div>);

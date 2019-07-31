@@ -56,9 +56,8 @@ export class ProductList extends Component {
   render() {
     return (
       <div className="App-product_list">
-        {this.renderProducts()}
-        {this.renderSortingDrop()}
         {this.props.products ? this.renderProducts() : 'Please wait till products load to the store...'}
+        {this.renderSortingDrop()}
       </div>);
   }
 }
