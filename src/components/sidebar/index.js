@@ -1,11 +1,12 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './sidebar.css';
 
 export const SideBar = (props) => {
   return (<div className="App-sidebar">
     <nav className="App-sidebar-nav">
-      <a onClick={() => props.changeNavigation('product-list')}>Product list</a>
-      <a onClick={() => props.changeNavigation('cart')}>Cart</a>
+      <NavLink to="/">Product list</NavLink>
+      <NavLink to="/cart">Cart</NavLink>
     </nav>
   </div>);
 };

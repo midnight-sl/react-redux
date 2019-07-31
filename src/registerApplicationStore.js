@@ -1,6 +1,8 @@
-import {createStore} from 'redux';
-import shopReducer from './reducers/shop.reducer';
+import {createStore, applyMiddleware, compose} from 'redux';
+import rootReducer from './reducers/index';
+import thunk from 'redux-thunk';
 
 export default function setupStore() {
-  return createStore(shopReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+  const extensions = (window.__REDUX_DEVTOOLS_EXTENSION__  || compose);
+  return createStore(rootReducer, extensions( applyMiddleware(thunk) ));
 }
